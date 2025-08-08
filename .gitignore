@@ -1,7 +1,6 @@
 test/
 longtrip
 generate
-verifier
 tags
 
 *.o
