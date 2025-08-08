@@ -1,9 +1,13 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "generate.h"
 
-void generate_hotels(int *hotels, int n)
+// TODO: change to 64 bit ints?
+void generate_hotels(uint64_t *hotels, int n)
 {
-    int temp[] = {0, 130, 211, 472, 863, 900};
-    for (int i = 0; i < n; i++)
-        hotels[i] = temp[i];
+    uint64_t current = 0;
+    for (int i = 0; i < n; i++) {
+         hotels[i] = current;
+         current += 1 + rand() % 400 + 1;
+    }
 }
